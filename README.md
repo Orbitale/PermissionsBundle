@@ -96,5 +96,5 @@ permissions:
         ADMIN: 'user.isAdmin()'
         EDIT_POST:
             supports: 'instanceof(user, user_class) and instanceof(subject, post_class)'
-            on_vote: 'user.isAdmin() and post.getAuthor().getId() === user.getId()'
+            on_vote: 'user.isAdmin() and subject.getAuthor().getId() === user.getId()'
 ```
