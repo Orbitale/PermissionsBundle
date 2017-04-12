@@ -1,0 +1,20 @@
+services:
+
+    permissions.expression_language:
+        class: Symfony\Component\Security\Core\Authorization\ExpressionLanguage
+        calls:
+            - ['registerProvider', ['@permissions.functions_provider']]
+
+    permissions.functions_provider:
+        class: Orbitale\Bundle\PermissionsBundle\Security\Provider\PermissionsFunctionsProvider
+
+    permissions.voter:
+        class: Orbitale\Bundle\PermissionsBundle\Security\Voter\PermissionsVoter
+        public: false
+        arguments:
+            - '@permissions.expression_language'
+            - '@security.token_storage'
+            - '%permissions.rules%'
+            - '%permissions.defaults%'
+        tags:
+            - { name: security.voter }
