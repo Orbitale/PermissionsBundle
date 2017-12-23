@@ -10,11 +10,11 @@
     },
     "require": {
         "php": "^5.5|^7.0",
-        "symfony/config": "^3.0",
-        "symfony/http-kernel": "^3.0",
-        "symfony/expression-language": "^3.0",
-        "symfony/security-bundle": "^3.0",
-        "symfony/dependency-injection": "^3.0"
+        "symfony/config": "^3.0|^4.0",
+        "symfony/http-kernel": "^3.0|^4.0",
+        "symfony/expression-language": "^3.0|^4.0",
+        "symfony/security-bundle": "^3.0|^4.0",
+        "symfony/dependency-injection": "^3.0|^4.0"
     },
     "license": "MIT",
     "authors": [
